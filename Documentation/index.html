@@ -1,0 +1,453 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">	
+	<title>Quick Quiz – Laravel Quiz and Exam System</title>	
+	<meta name="description" content="">
+	<meta name="author" content="Media City">
+	<meta name="copyright" content="Media City">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2016-03-12T00:00:00+01:00">	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<script src="assets/js/jquery.min.js"></script>	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>	
+	<style>
+		html{background-color:#FFFFFF;color:#000;}
+		::-moz-selection{background:#333636;color:#000;}
+		::selection{background:#333636;color:#000;}
+		#documenter_sidebar #documenter_logo{background-image:url(./assets/images/logo.jpg);}
+		a{color:#0081EF;}
+		.btn {
+			border-radius: 0;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0081EF, #0081EF);
+			  background-image: -ms-linear-gradient(top, #0081EF, #0081EF);
+			  background-image: -webkit-gradient(linear, 0 0, 0 1C8EFF%, from(#0081EF), to(#0081EF));
+			  background-image: -webkit-linear-gradient(top, #0081EF, #0081EF);
+			  background-image: -o-linear-gradient(top, #0081EF, #0081EF);
+			  background-image: linear-gradient(top, #0081EF, #0081EF);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0081EF', endColorstr='#1672CC', GradientType=0);
+			  border-color: #0081EF #0081EF #0081EF;
+			  color:#FFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0081EF #0081EF #0081EF;
+		  background-color: #cdbd00;
+		}
+		hr{border-top:1px solid #262626;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#0081EF;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#0081EF;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-fixit-multipurpose-construction-building-psd-t">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>				
+			<li><a href="#overview" title="Overview">Overview</a></li>
+			<li><a href="#install" title="Installation">Installation</a></li>
+			<li><a href="#mail" title="Debug Mode">Mail Settings</a></li>	
+			<li><a href="#public" title="Remove Public from URL">Remove Public From URL</a></li>
+			<li><a href="#debug" title="Debug Mode">Debug Mode</a></li>	
+			<li><a href="#general" title="General Settings">General Settings</a></li>						
+			<li><a href="#updates" title="Updates">Updates</a></li>		
+			<li><a href="#updateprocess" title="Update Process">Update Process</a></li>		
+			<li><a href="#credits" title="Credits">Source &amp;Credits</a></li>
+			<li><a href="#Conclusion" title="Support and Documentation">Conclusion</a></li>
+		</ul>
+		<div id="documenter_copyright">Copyright 2019 Media City 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Quick Quiz – Laravel Quiz and Exam System</h1>
+	<h2>Documentation by “Media City” v2.2</h2>
+	<div id="documenter_buttons">
+		<a href="https://codecanyon.net/user/media-city" class="btn btn-primary btn-large">Portfolio</a> <a href="http://mediacity.co.in/" class="btn btn-large">Media City</a> 
+	</div>
+	<hr>
+	<ul>
+	<li>version: 2.2</li>
+	<li>created: 20/12/2017</li>
+	<li>updated: 05/09/2019</li>
+	<li>by: Media City</li>
+	<li><a href="http://mediacity.co.in">mediacity.co.in</a></li>
+	<li>email: sudhirchechani@gmail.com </li>	
+	</ul>
+	<p>Thank you for purchasing this script. For further questions please <a href="https://codecanyon.net/user/media-city" target="_blank">contact us</a> through ThemeForest or leave an comment. We'd  love respond to you!</p>
+	</section>
+	
+	<section id="overview">
+	<div class="page-header"><h3>Overview</h3><hr class="notop"></div>
+	<p>Don’t you think you should upgrade the test / exam pattern of your institute?</p>
+	<p>As we all know we moving our steps very fast with the new-new technology day by day. So why? to adopt the old pattern of taking exams. Better to update your test &amp; exam segment forms with our developed platform named “Quick Quiz”.</p>
+	<p>Read Digital + Test Digital = You will save your time as well as your capital.</p>
+	<p>“Quick Quiz” is a platform for Schools, Colleges, Institute &amp; Coaching Centers. With the help of this platform, you can take Online-Offline Exams, Quiz, Test, Quiz Competition, Challenges etc.</p>
+	<h3>Key Features</h3>
+	<ul>
+		<li>Quiz and Exam System</li>
+		<li>Support Lan</li>
+		<li>Admin Panel</li>
+		<li>Login System</li>
+		<li>Secure login and change password</li>
+		<li>Secure password</li>
+		<li>Faq Pages</li>
+		<li>Custom Pages</li>
+		<li>Mail Setting through Admin Panel</li>
+		<li>PayPal Payment Gateway</li>
+		<li>Paid And Free Quiz</li>		
+		<li>Bootstrap 3 Framework</li>
+		<li>Vue Js</li>
+		<li>Based on 1170px grid</li>
+		<li>W3C Valid Markup</li>
+		<li>Smooth Transition Effects</li>
+		<li>Free Icon Fonts</li>
+		<li>Font Awesome Icons</li>
+		<li>Google Fonts</li>
+		<li>Cross Browser Compatible</li>
+		<li>Mobile and Tablet Support</li>
+		<li>Responsive Design</li>
+		<li>Documentation Include</li>
+		<li>Unique and Exclusive Idea</li>
+		<li>Unique and Creative Project</li>			
+	</ul>
+</section>
+<section id="install">
+	<div class="page-header"><h3>Installation</h3><hr class="notop"></div>
+	
+<div class="entry-content clearfix">
+	<h3>Introduction</h3>
+	<p>Before install make sure you have the proper server requirements</p>
+	<pre>
+PHP 7.2 or greater
+OpenSSL PHP Extension 
+PHP Fileinfo extension
+PHP Zip Archive
+	</pre>
+	<p>File and folder permissions</p>
+	<pre>
+/bootstrap        775
+/public/	  775
+/storage          775
+	</pre>
+	<h3>Installation with Apache</h3>
+	<p>Before installing, make sure mod_rewrite is enabled.</p>
+	<p>Unzip the source file</p>
+	<pre>
+cd /home/user/
+unzip quickquiz.zip
+	</pre>
+	<p>/home/user/quickquiz, you can configure Apache virtual host as follows (remember to point the DocumentRoot to the public folder of the source)</p>
+	<pre>
+&lt;VirtualHost *:80&gt;
+	ServerName yoursite.com
+	DocumentRoot "/home/user/quickquiz/public"
+	Options Indexes FollowSymLinks
+	&lt;Directory "/home/user/quickquiz/public"&gt;
+		AllowOverride All
+		Require all granted
+	&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+	</pre>
+	<p>Change the director/file’s owner to Apache’s running user (www-data for example), to make sure it has proper permission on your source files</p>
+	<pre>
+sudo chown www-data:www-data -R /home/user/quickquiz
+sudo chmod 775 -R /home/user/quickquiz
+	</pre>
+	<p>Then restart Apache.</p>	
+	<h3>Shared Hosting Install</h3>
+	<p>Consider that this is the webroot folder for your quickquiz website:&nbsp;<code>/home/myusername/public_html/</code></p>
+	<p>Put all the main folder’s files in your quickquiz website at&nbsp;<code>/home/myusername/public_html/</code></p>
+		<p>Create MySQL database, add user to it with full permissions. Import (Database -> quiz_db.sql ) quiz_db.sql file in created Database. </p>	
+	<p>open .env file and Fill database Details.
+<pre>
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+</pre>
+	</p>
+	<p>You are done.</p>	
+
+	<h5>For Cpanel Installation Demo Video Mail Your Purchase Code.</h5>
+	
+</div>
+</section>
+<section id="mail">
+	<div class="page-header"><h3>Mail Settings</h3><hr class="notop"></div>
+<p>For Email Sending When User Register and forgot password.</p>
+<p>Open and edit&nbsp;<code>.env</code>&nbsp;file.</p>
+<pre>
+MAIL_DRIVER=smtp  (Some time sendmail)
+MAIL_HOST=smtp.gmail.com (For Gmail = smtp.gmail.com)
+MAIL_PORT=2525  (For Gmail = 465)
+MAIL_USERNAME=youremailid
+MAIL_PASSWORD=yourpassword
+MAIL_ENCRYPTION=null  (For Gmail = ssl)
+</pre>
+<h5>Mail Chimp Or Subscribe Newsletter Settings</h5>
+<p>For mail chimp or subscribe newsletter.</p>
+<p>Open and edit&nbsp;<code>.env</code>&nbsp;file.</p>
+<pre>
+MAILCHIMP_API_KEY=yourapikey
+MAILCHIMP_LIST_ID=yourlistid
+</pre>
+<p>Open and edit&nbsp; <code>app</code> -> <code>Http</code> -> <code>Controllers</code> -> <code>mailChimpController.php</code></p>
+<pre>
+protected $listId = 'yourmailchimplistid';
+</pre>
+</section>
+<section id="public">
+	<div class="page-header"><h3>Remove Public From URL</h3><hr class="notop"></div>
+		<p>To remove public from URL create .htaccess file in root folder and write following code.</p>
+<pre>
+&lt;IfModule mod_rewrite.c&gt;
+	RewriteEngine On 
+	RewriteRule ^(.*)$ public/$1 [L]
+&lt;/IfModule&gt;
+</pre>
+<p>For more detail read article : <a href="https://stackoverflow.com/questions/23837933/how-can-i-remove-public-index-php-in-the-url-generated-laravel" title="Remove Public From URL" target="_blank">https://stackoverflow.com/questions/23837933/how-can-i-remove-public-index-php-in-the-url-generated-laravel</a></p>
+</section>
+<section id="debug">
+	<div class="page-header"><h3>Debug Mode</h3><hr class="notop"></div>
+	<p>Debug mode will help you to track the error on your website. It is not all preferred to turn the debug mode on live site for very long time.</p>
+	<p>How to turn debug mode on</span></p>
+	<ul>
+		<li>Login to you FTP account.</li>
+		<li>Open and edit&nbsp;<code>.env</code>&nbsp;file.</li>
+	</ul>
+	<p>	Change</p>
+	<pre ><code>APP_DEBUG=false</code></pre>
+	<p>To</p>
+	<pre><code>APP_DEBUG=true</code></pre>
+	<ul>
+		<li>Save and upload the file.</li>
+	</ul>
+	<p><code>false</code>&nbsp;means debug mode is OFF<br>
+		<code>true</code>&nbsp;means debug mode is ON</p>
+</section>
+<section id="general">
+	<div class="page-header"><h3>General Settings</h3><hr class="notop"></div>		
+		<h5><b>User Register  and Reset Password Show Error</b></h5>
+		<p>Reset password error show due to you forget add mail details in .env file.<br/>
+		Mail Settings<br/>
+		For Email Sending.<br/>
+		<br/>
+		Open and edit .env file.<br/>
+		<br/>
+		MAIL_DRIVER=smtp<br/>
+		MAIL_HOST=smtp.gmail.com (For Gmail = smtp.gmail.com)<br/>
+		MAIL_PORT=2525 (For Gmail = 465)<br/>
+		MAIL_USERNAME=youremailid<br/>
+		MAIL_PASSWORD=yourpassword<br/>
+		MAIL_ENCRYPTION=null (For Gmail = ssl)</p>
+
+		<h5><b>Best Image Size</b></h5>
+		<p>Logo : 1440 X 675 <br/>
+		</p>		
+
+		<h5><b>HTTP 500 Error</b></h5>
+		<p>This error show to PHP version.<br/>
+		Please make sure you select PHP version 7.1.<br/>
+		Please make sure your database all details is correct.<br/>
+		<img src="assets/images/http500.png" alt="HTTP 500 Error" width="50%">
+		</p>
+
+		<h5><b>Default Login Details</b></h5>
+		<p>Admin: <br/>
+		<br/>
+		Username: admin@info.com <br/>
+		Password: 123456
+		</p>
+
+		<h5><b>PayPal Settings</b></h5>
+		<h6><b>For Paypal payment gateway You Need Paypal Key. For Key Go To: <a href="https://paypal.com/">https://paypal.com/</a></b></br></br> Go to .env file and fill following details</h6>
+<pre>
+PAYPAL_CLIENT_ID=yourclientid
+PAYPAL_SECRET_ID=yoursecretid
+PAYPAL_MODE=paypalmode (sandbox or live)
+</pre>
+		<h5><b>Note :</b> All your test complete then make Paypal to live mode, Paypal Sandbox Mode user and plan not support to live mode.<br/>
+		Please make new user and plan after Paypal live.<br/>		
+		Paypal not support $0 plan it's need at least $1.<br/>	
+		If Showing Error Check Currency Code In Site Settings -> General Settings.<br/>
+</section>
+<section id="updates">
+	<div class="page-header"><h3>Updates</h3><hr class="notop"></div>
+<h6>05/09/2019 ( Version 2.2 )</h6>
+<pre>
+- Results Issue Fixed
+- Each Student Reset Answer
+- Answer Explanation Issue Fixed
+</pre>
+<h6>20/08/2019 ( Version 2.1 )</h6>
+<pre>
+- Login &amp; Register UI Issue
+- Fix Footer Bar Issue
+- Fix Question Not Adding Bug
+- Show Answers Repeat Issue Fixed
+- Change Password Issue Bug Fixed
+- Add New User Through Admin Bug Fixed
+</pre>
+<h6>28/05/2019 ( Version 2.0 )</h6>
+<pre>
+- Social Icons Add
+- Forgot Password Add
+- Custom Pages
+- Faq's
+- Copyright Text Change
+- Mail Setting Through Admin
+- Payment History
+- PayPal Payment Gateway Add
+- Free And Paid Quiz Option
+- Right Click &amp; Inspect Element Disable
+- Enable / Disable Show Answers
+- Improve Change Password
+- Delete Answer Each Quiz
+- Git Lab Login (Twitter, Git Hub, Bit Bucket &amp; Google)
+- Social Login (Facebook &amp; Google)
+</pre>
+<h4>18 January 2019</h4>
+<pre>
+- Hours Time Issue Resolved
+- Question Again Given Issue Resolved
+- Validate W3C
+- Fixing Minor Bugs
+</pre>
+<h4>10 June 2018</h4>
+<pre>
+- Student Reports Show Issue resolved.
+- Student Marks Issue Resolve
+- Arrange Menu Proper Way
+- Provide Proper descriptions and Instructions
+- Footer Copyright, Title Issue Resolved
+- Fixing Minor Bugs
+</pre>
+<h4>05 January 2018</h4>
+<pre>
+- Bulk Question Importer
+- Student Marks Issue Resolve
+</pre>
+<h4>22 December 2017</h4>
+<pre>
+- Images Option In Questions
+- YouTube &amp; Vemo Video Option In Questions
+- Students See Result After Quiz
+</pre>
+<section id="updateprocess">
+	<div class="page-header"><h3>Update Process</h3><hr class="notop"></div>
+	<h5><b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b></h5>
+	<p>Copy All files and paste to you folder replace file. Only be careful when replace files in public folder and .env file. Any user customize design and code please do not update. For database do not import all tables. Please Do not import whole database file, only new user required to update whole database.</p>
+	<h5><b>Update Version 2.0<br/></b></h5>
+	<p>Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder. Database old is work fine but need some columns and tables.</p>
+	<table border="1">
+		<tr>
+			<td>1.</td>
+			<td>Add <b>show_ans, amount</b> column in <b>topics</b> table. Make both Integer and NULL.<br/>		
+			</td>
+		</tr>		
+		<tr>
+			<td>2.</td>
+			<td>Add <b>right_setting, element_setting, fb_login, gitlab_login, google_login</b> column in <b>settings</b> table. Make all boolean and NULL.<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>Add <b>google_id, facebook_id</b> column in <b>users</b> table. Make both column unique and NULL.<br/>			
+			</td>
+		</tr>
+		<tr>
+			<td>4.</td>
+			<td>Remove <b>tests</b> table. It's not required.<br/>			
+			</td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td>Create New Table <b>topic_user, faq, copyrighttexts, configs, social_icons and pages</b>.<br/>
+			<b>Note: </b>You Can Import Table From <b>Database -> Old Users Update -> </b> quickquiz_2_0.sql.<br/>
+			</td>
+		</tr>
+	</table><br/>
+	<b>Note: </b>You Can not Import Columns, You need to create it Manually.	
+	<br/>
+	<h5><b>Update Version 2.1<br/></b></h5>
+	<p>First Update 2.0 then update it. Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder and .env file. Any user customize design and code please do not update.</p>
+	<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b><br/><br/>
+
+	<h5><b>Update Version 2.2<br/></b></h5>
+	<p>First Update 2.0 then update it. Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder and .env file. Any user customize design and code please do not update.</p>
+	<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b>
+	
+</section>
+<section id="credits">
+	  <div class="page-header">
+	    <h3>Source &amp;Credits</h3>
+	    <hr class="notop">
+	  </div>
+  	<h5>Thanks for each of these people that made our Plugin look amazing with their fabulous Images, Icons, Fonts, Js, Css and Videos.</h5>
+	<br/>
+	<strong>HTML / CSS: </strong>
+	<li><a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a></li>
+	<strong>Images: </strong>
+	<li><a href="http://www.freepik.com/" target="_blank">freepik.com</a></li>
+	<strong>Icons: </strong>
+	<li>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></li>
+	<li><a href="http://fontawesome.io/" target="_blank">Fontawesome</a></li>
+	<strong>JS: </strong>
+	<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+	<li><a href="https://vuejs.org/" target="_blank">vuejs.org/</a></li>
+	<strong>Fonts: </strong>
+	<li><a href="https://www.google.com/webfonts" target="_blank">Google Fonts</a></li>
+	<li><a href="http://fontawesome.io/" target="_blank">Font Aawesome</a></li>
+	<strong>Mockups: </strong>
+	<li><a href="http://www.pixeden.com/">Pixeden</a></li>
+	<br/><br/>
+	<b>Note:</b> Images only for demo version. Images used in previews are not included in download file.	
+</section>
+<section id="Conclusion">
+	<div class="page-header">
+	  <h3>Conclusion</h3>
+	  <hr class="notop">
+	</div>
+	<p>Once again, thank you so much for purchasing this Plugin. As I said at the beginning, I'd be glad to help you if you have any questions relating to this Plugin. No guarantees, but I'll do my best to assist. If you have a more general question relating to the Plugin on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+	<hr>
+	<h5 class="ky1">Media City</h5>
+	<ul class="ky2">	 
+	  </a> <a href="http://codecanyon.net/user/media-city/portfolio">
+	  <li>Code Canyon</li>
+	   <a href="https://themeforest.net/user/media-city">
+	  <li>Themeforest</li>
+	  </a> <a href="http://graphicriver.net/user/media-city/portfolio">
+	  <li>Graphic River</li>
+	  </a> <a href="http://mediacity.co.in">
+	  <li>www.mediacity.co.in</li>
+	  </a>
+	</ul>
+	<br>
+	<br>
+	<h5 class="ky1">Support &amp; mail</h5>
+	<ul class="ky2">
+	<li><a href="mailto:sudhirchechani@gmail.com">sudhirchechani@gmail.com</a></li>
+	<li><a href="mailto:info@mediacity.co.in">info@mediacity.co.in</a></li>
+</section>
+	</div>
+</body>
+</html>
