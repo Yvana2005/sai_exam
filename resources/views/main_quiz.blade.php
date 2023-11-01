@@ -16,7 +16,7 @@
 
 @section('top_bar')
   <nav class="navbar navbar-default navbar-static-top">
-    <div class="logo-main-block">
+   <!-- <div class="logo-main-block">
       <div class="container">
         @if ($setting)
           <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
@@ -24,7 +24,7 @@
           </a>
         @endif
       </div>
-    </div>
+    </div>-->
     <div class="nav-bar">
       <div class="container">
         <div class="row">
@@ -62,9 +62,17 @@
        $que =  App\Question::where('topic_id',$topic->id)->first();
       ?>
        @if(!empty($users))
+       <div class="home-main-block">
           <div class="alert alert-danger">
-              You have already Given the test ! Try to give other Quizes
+              Vous avez deja passe le test ! Pour pouvoir recommencer vous devez payer ou sinon vous pouvez vous amuser avec nos autres quiz
           </div>
+          <div class="col-md-6">
+          <a href="{{route('login')}}" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF; margin-bottom:10px;">Accueil </a>
+          </div>
+          <div class="col-md-6">
+          <a href="{{!! URL::to('paypal') !!}}" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF;">Paiement </a>
+          </div>
+        </div> 
        @else
       <div id="question_block" class="question-block">
         <question :topic_id="{{$topic->id}}" ></question>
@@ -72,7 +80,7 @@
       @endif
       @if(empty($que))
       <div class="alert alert-danger">
-            No Questions in this quiz
+            Pas de Questions dans ce quiz
       </div>
       @endif
     </div>

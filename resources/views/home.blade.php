@@ -12,7 +12,7 @@
 
 @section('top_bar')
   <nav class="navbar navbar-default navbar-static-top">
-    <div class="logo-main-block">
+   <!-- <div class="logo-main-block">
       <div class="container">
         @if ($setting)
           <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
@@ -20,26 +20,28 @@
           </a>
         @endif
       </div>
-    </div>
+    </div>-->
     <div class="nav-bar">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="navbar-header">
-              <!-- Branding Image -->
-              @if($setting)
-                <a class="tt" title="Quick Quiz Home" href="{{url('/')}}"><h4 class="heading">{{$setting->welcome_txt}}</h4></a>
-              @endif
+              
+               @if ($setting)
+               <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
+            <img src="{{asset('/images/logo/background.png')}}" class="img-responsive" alt="{{$setting->welcome_txt}}">
+          </a>
+        @endif
             </div>
           </div>
           <div class="col-md-6">
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-              <!-- Right Side Of Navbar -->
+              
               <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
+               
                 @guest
                   <li><a href="{{ route('login') }}" title="Login">Login</a></li>
-                  <li><a href="{{ route('register') }}" title="Register">Register</a></li>
+                  <li><a href="{{ route('register') }}" title="Register">{{__('message.Register')}}</a></li>
                 @else
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -47,9 +49,9 @@
                     </a>
                     <ul class="dropdown-menu">
                       @if ($auth->role == 'A')
-                        <li><a href="{{url('/admin')}}" title="Dashboard">Dashboard</a></li>
+                        <li><a href="{{url('/admin')}}" title="Dashboard">{{__('message.Dashboard')}}</a></li>
                       @elseif ($auth->role == 'S')
-                        <li><a href="{{url('/admin/my_reports')}}" title="Dashboard">Dashboard</a></li>
+                        <li><a href="{{url('/admin/my_reports')}}" title="Dashboard">{{__('message.Dashboard')}}</a></li>
                       @endif
                       <li>
                         <a href="{{ route('logout') }}"
@@ -66,8 +68,8 @@
                  
                   <li><a href="{{ route('faq.get') }}">FAQ</a></li>
                 @endguest
-                  <li><a href="{{url('pages/how-it-works')}}">How it works</a></li>
-                  <li><a href="{{url('pages/about-us')}}">About us</a></li>
+                  <li><a href="{{url('pages/how-it-works')}}">{{__('message.How it works')}}</a></li>
+                  <li><a href="{{url('pages/about-us')}}">{{__('message.About us')}}</a></li>
               </ul>
             </div>
           </div>
@@ -93,11 +95,11 @@
                     <div class="row">
                       <div class="col-xs-6 pad-0">
                         <ul class="topic-detail">
-                          <li>Per Question Mark <i class="fa fa-long-arrow-right"></i></li>
-                          <li>Total Marks <i class="fa fa-long-arrow-right"></i></li>
-                          <li>Total Questions <i class="fa fa-long-arrow-right"></i></li>
-                          <li>Total Time <i class="fa fa-long-arrow-right"></i></li>
-                          <li>Quiz Price <i class="fa fa-long-arrow-right"></i></li>
+                          <li>{{__('message.Per Question Mark')}} <i class="fa fa-long-arrow-right"></i></li>
+                          <li>{{__('message.Total Marks')}}  <i class="fa fa-long-arrow-right"></i></li>
+                          <li>{{__('message.Total Questions')}} <i class="fa fa-long-arrow-right"></i></li>
+                          <li>{{__('message.Total Time')}} <i class="fa fa-long-arrow-right"></i></li>
+                          <li>{{__('message.Quiz Price')}} <i class="fa fa-long-arrow-right"></i></li>
                         </ul>
                       </div>
                       <div class="col-xs-6">
@@ -153,7 +155,7 @@
                   @endif
 
                     @if($auth->topic()->where('topic_id', $topic->id)->exists())
-                      <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Start Quiz </a>
+                      <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Commencer </a>
                     @else
                       {!! Form::open(['method' => 'POST', 'action' => 'PaypalController@paypal_post']) !!} 
                         {{ csrf_field() }}
@@ -163,7 +165,7 @@
                         <button type="submit" class="btn btn-default">Pay  <i class="{{$setting->currency_symbol}}"></i>{{$topic->amount}}</button>
                           @else 
 
-                          <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Start Quiz </a>
+                          <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Commencer </a>
 
                         @endif
 
@@ -197,11 +199,19 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="home-main-block">
-              @if ($setting)
-                <h1 class="main-block-heading text-center">{{$setting->welcome_txt}}</h1>
-              @endif
-                <blockquote>
-                  Please <a href="{{ route('login') }}">Login</a> To Start Quiz >>>
+              
+                <!--<h1 class="main-block-heading text-center" style="color:#fff; text-shadow:2px 2px 2px #8b008b;">QUIZ APP Saï i lama</h1>-->
+                
+                 <blockquote>
+                   <div class="col-md-12">
+                   <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
+                      <img src="{{asset('/images/logo/makeup.jpg')}}" class="img-responsive" alt="{{$setting->welcome_txt}}" style="max-width: 95% !important; align-items:center; margin-left:10px; margin-bottom: 30px; border-radius: 6px; box-shadow:2px 2px 2px #424242;">
+                   </a>
+                   </div>
+                  
+               
+                  <p>Pour commencer le Quiz, vous devez vous connecter</p>
+                  <a href="{{route('login')}}" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF;">Login </a>
                 </blockquote>
             </div>
         </div>
