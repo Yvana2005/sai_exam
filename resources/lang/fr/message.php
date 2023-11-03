@@ -20,7 +20,7 @@ return [
 "Dashboard" => "Tableau de bord",
 "Register" => "Registre",
 "Per Question Mark" => "points",
-"Total Marks" => "Total points",
+"Total Marks" => "Points total",
 "Total Questions" => "Total questions",
 "Total Time" => "Temps",
 "Quiz Price" => "Prix",
@@ -45,6 +45,24 @@ return [
 "Quiz Title" => "Titre du quiz",
 "Edit" => "Editer",
 "Delete" => "Supprimer",
+
+//Questions
+"Add Question" => "Ajouter une question",
+"Import Questions" => "Importer des questions",
+"Video And Image For Question" => "Vidéo et image pour la question",
+"Correct Answer" => "Reponse correcte",
+"Code Snippet" => "Extrait de code",
+"Answer Explanation" => "Explication de la réponse",
+//all.reports
+"Student Name" => "Noms des utilisateurs",
+"Mobile No." => "No de telephone",
+"Topic" => "Sujet",
+"Marks Got" => "Note obtenue",
+
+"Add Student" => "Ajouter un utilisateur",
+"Delete All Student" => "Supprimer tout les utilisateurs",
+"Do you" => "Voulez-vous vraiment supprimer « Tous ces enregistrements » ? Ce processus ne peut pas être annulé.",
+"Are you" => "Etes-vous sûr ?"
 
 ]
 ?>

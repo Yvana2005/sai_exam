@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Students Report By Topic Wise',
+  'page_header' => 'Rapport des étudiants par sujet',
   'dash' => '',
   'quiz' => '',
   'users' => '',
@@ -22,10 +22,10 @@
             <div class="row">
               <div class="col-xs-6 pad-0">
                 <ul class="topic-detail">
-                  <li>Per Question Mark <i class="fa fa-long-arrow-right"></i></li>
-                  <li>Total Marks <i class="fa fa-long-arrow-right"></i></li>
-                  <li>Total Questions <i class="fa fa-long-arrow-right"></i></li>
-                  <li>Total Time <i class="fa fa-long-arrow-right"></i></li>
+                  <li>{{__('message.Per Question Mark')}} <i class="fa fa-long-arrow-right"></i></li>
+                  <li>{{__('message.Total Marks')}} <i class="fa fa-long-arrow-right"></i></li>
+                  <li>{{__('message.Total Questions')}} <i class="fa fa-long-arrow-right"></i></li>
+                  <li>{{__('message.Total Time')}} <i class="fa fa-long-arrow-right"></i></li>
                 </ul>
               </div>
               <div class="col-xs-6">
@@ -53,7 +53,7 @@
                 </ul>
               </div>
             </div>
-            <a href="{{route('all_reports.show', $topic->id)}}" class="btn btn-wave">Show Report</a>
+            <a href="{{route('all_reports.show', $topic->id)}}" class="btn btn-wave">rapport d'émission</a>
           </div>
         </div>
       @endforeach

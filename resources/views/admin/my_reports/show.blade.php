@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => "My Report / {$topic->title}",
+  'page_header' => "Mes Rapport / {$topic->title}",
   'dash' => '',
   'users' => '',
   'questions' => '',
