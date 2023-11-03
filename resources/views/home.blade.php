@@ -12,7 +12,7 @@
 
 @section('top_bar')
   <nav class="navbar navbar-default navbar-static-top">
-   <!-- <div class="logo-main-block">
+   <!--<div class="logo-main-block">
       <div class="container">
         @if ($setting)
           <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">

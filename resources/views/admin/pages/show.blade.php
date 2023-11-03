@@ -12,7 +12,7 @@
 
 @section('top_bar')
   <nav class="navbar navbar-default navbar-static-top">
-    <div class="logo-main-block">
+   <!-- <div class="logo-main-block">
       <div class="container">
         @if ($setting)
           <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
@@ -20,7 +20,7 @@
           </a>
         @endif
       </div>
-    </div>
+    </div>-->
     <div class="nav-bar">
       <div class="container">
         <div class="row">
@@ -53,7 +53,7 @@
                 @guest
                   
                   <li><a href="{{ route('login') }}" title="Login">Login</a></li>
-                  <li><a href="{{ route('register') }}" title="Register">Register</a></li>
+                  <li><a href="{{ route('register') }}" title="Register">Registre</a></li>
                 
                 @else
                   
@@ -63,9 +63,9 @@
                     </a>
                     <ul class="dropdown-menu">
                       @if ($auth->role == 'A')
-                        <li><a href="{{url('/admin')}}" title="Dashboard">Dashboard</a></li>
+                        <li><a href="{{url('/admin')}}" title="Dashboard">{{__('message.Dashboard')}}</a></li>
                       @elseif ($auth->role == 'S')
-                        <li><a href="{{url('/admin/my_reports')}}" title="Dashboard">Dashboard</a></li>
+                        <li><a href="{{url('/admin/my_reports')}}" title="Dashboard">{{__('message.Dashboard')}}</a></li>
                       @endif
                       <li>
                         <a href="{{ route('logout') }}"
@@ -81,8 +81,8 @@
                 </li>
                  <li><a href="{{ route('faq.get') }}">FAQ</a></li>
                 @endguest
-                  <li><a href="{{url('pages/how-it-works')}}">How it works</a></li>
-                  <li><a href="{{url('pages/about-us')}}">About us</a></li>
+                  <li><a href="{{url('pages/how-it-works')}}">{{__('message.How it works')}}</a></li>
+                  <li><a href="{{url('pages/about-us')}}">{{__('message.About us')}}</a></li>
             </ul>
           </div>
         </div>

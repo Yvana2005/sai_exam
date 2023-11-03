@@ -34,7 +34,17 @@ return [
 "Student Report" => "Rapport d'utilisateurs",
 "Top Student Report" => "Top des utilisateurs",
 "Settings" => "Paramètres",
-"More settings" => "Plus"
+"More settings" => "Plus",
+"Social Login Setting" => "paramètres de connexion sociale",
+"Social Icon" => "icône sociale",
+"Mail Setting" => "Paramètres de messagerie",
+"Custom Style Settings" => "Paramètres de style personnalisés",
+//Quiz
+"Add Quiz" => "Ajouter un Quiz",
+"Enable Show Answer:" => "Activer Afficher la réponse : ",
+"Quiz Title" => "Titre du quiz",
+"Edit" => "Editer",
+"Delete" => "Supprimer",
 
 ]
 ?>
