@@ -43,7 +43,7 @@
                 <!-- Authentication Links -->
                 @guest
                   <li><a href="{{ route('login') }}" title="Login">Login</a></li>
-                  <li><a href="{{ route('register') }}" title="Register">Register</a></li>
+                  <li><a href="{{ route('register') }}" title="Register">Registre</a></li>
                 @else
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -51,9 +51,9 @@
                     </a>
                     <ul class="dropdown-menu">
                       @if ($auth->role == 'A')
-                        <li><a href="{{url('/admin')}}" title="Dashboard">Dashboard</a></li>
+                        <li><a href="{{url('/admin')}}" title="Dashboard">{{__('message.Dashboard')}}</a></li>
                       @elseif ($auth->role == 'S')
-                        <li><a href="{{url('/admin/my_reports')}}" title="Dashboard">Dashboard</a></li>
+                        <li><a href="{{url('/admin/my_reports')}}" title="Dashboard">{{__('message.Dashboard')}}</a></li>
                       @endif
                       <li>
                         <a href="{{ route('logout') }}"
@@ -89,15 +89,15 @@
         @if($topic->show_ans==1)
         
          <div class="question-block">
-            <h2 class="text-center main-block-heading">{{$topic->title}} ANSWER REPORT</h2>
+            <h2 class="text-center main-block-heading">{{$topic->title}} {{__('message.ANSWER REPORT')}}</h2>
             <table class="table table-bordered result-table">
               <thead>
                 <tr>
                   <th>Question</th>                  
                   
-                  <th style="color: green;">Correct Answer</th>
-                  <th style="color: red;">Your Answer</th>
-                  <th>Answer Explnation</th>
+                  <th style="color: green;">{{__('message.Correct Answer')}}</th>
+                  <th style="color: red;">{{__('message.Your Answer')}}</th>
+                  <th>{{__('message.Answer Explanation')}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -137,14 +137,14 @@
 
 
           <div class="question-block">
-            <h2 class="text-center main-block-heading">{{$topic->title}} Result</h2>
+            <h2 class="text-center main-block-heading">{{$topic->title}} Resultat</h2>
             <table class="table table-bordered result-table">
               <thead>
                 <tr>
-                  <th>Total Questions</th>
-                  <th>My Marks</th>
-                  <th>Per Question Mark</th>
-                  <th>Total Marks</th>
+                  <th>{{__('message.Total Questions')}}</th>
+                  <th>{{__('message.My Marks')}}</th>
+                  <th>Point par question</th>
+                  <th>{{__('message.Total Marks')}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -172,7 +172,7 @@
                 </tr>
               </tbody>
             </table>
-            <h2 class="text-center">Thank You!</h2>
+            <h2 class="text-center">Merci !</h2>
           </div>
         </div>
       </div>

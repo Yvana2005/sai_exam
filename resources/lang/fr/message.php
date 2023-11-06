@@ -62,7 +62,18 @@ return [
 "Add Student" => "Ajouter un utilisateur",
 "Delete All Student" => "Supprimer tout les utilisateurs",
 "Do you" => "Voulez-vous vraiment supprimer « Tous ces enregistrements » ? Ce processus ne peut pas être annulé.",
-"Are you" => "Etes-vous sûr ?"
+"Are you" => "Etes-vous sûr ?",
+
+"My Answer" => "Ma reponse",
+"Answer Explanation" => "Explication de la reponse",
+"Marks" => "Points",
+"Show Report" => "Rapport d'emission",
+"Payment ID" => "ID de paiement",
+"Amount" => "Montant",
+"ANSWER REPORT" => "Rapport de reponse",
+"Your Answer" => "Votre reponses",
+
+
 
 ]
 ?>

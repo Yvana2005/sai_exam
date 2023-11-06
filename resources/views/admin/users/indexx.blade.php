@@ -13,7 +13,7 @@
 @include('message')
   @if ($auth->role == 'A')
     <div class="margin-bottom">
-      <button type="button" class="btn btn-wave" data-toggle="modal" data-target="#createModal">{{__('message.{{__('message.Add Student')}}')}}</button>
+      <button type="button" class="btn btn-wave" data-toggle="modal" data-target="#createModal">{{__('message.Add Student')}}</button>
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#AllDeleteModal">{{__('message.Delete All Student')}}s</button>
     </div>
     <!-- All Delete Button -->
@@ -111,12 +111,12 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Student Name</th>
+              <th>{{__('message.Student Name')}}</th>
               <th>Email</th>
-              <th>Mobile No.</th>
-              <th>City</th>
-              <th>Address</th>
-              <th>User Role</th>
+              <th>{{__('message.Mobile No.')}}</th>
+              <th>Ville</th>
+              <th>Addresse</th>
+              <th>Role d''utilisateur</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -137,7 +137,7 @@
                   <td>{{$user->role == 'S' ? 'Student' : '-'}}</td>
                   <td>
                     <!-- Edit Button -->
-                    <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#{{$user->id}}EditModal"><i class="fa fa-edit"></i> Edit</a>
+                    <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#{{$user->id}}EditModal"><i class="fa fa-edit"></i> Editer</a>
                     <!-- Delete Button -->
                     <a type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#{{$user->id}}deleteModal"><i class="fa fa-close"></i> Supprimer</a>
                     <div id="{{$user->id}}deleteModal" class="delete-modal modal fade" role="dialog">
@@ -154,8 +154,8 @@
                           </div>
                           <div class="modal-footer">
                             {!! Form::open(['method' => 'DELETE', 'action' => ['UsersController@destroy', $user->id]]) !!}
-                                {!! Form::reset("No", ['class' => 'btn btn-gray', 'data-dismiss' => 'modal']) !!}
-                                {!! Form::submit("Yes", ['class' => 'btn btn-danger']) !!}
+                                {!! Form::reset("Non", ['class' => 'btn btn-gray', 'data-dismiss' => 'modal']) !!}
+                                {!! Form::submit("Oui", ['class' => 'btn btn-danger']) !!}
                             {!! Form::close() !!}
                           </div>
                         </div>
@@ -178,7 +178,7 @@
                               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                 {!! Form::label('name', 'Name') !!}
                                 <span class="required">*</span>
-                                {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'Enter your name']) !!}
+                                {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'Entrez votre nom']) !!}
                                 <small class="text-danger">{{ $errors->first('name') }}</small>
                               </div>
                               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -216,12 +216,12 @@
                               </div>
                               <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                                 {!! Form::label('city', 'Enter City') !!}
-                                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Enter Your City']) !!}
+                                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Entrez votre ville']) !!}
                                 <small class="text-danger">{{ $errors->first('city') }}</small>
                               </div>
                               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                                 {!! Form::label('address', 'Address') !!}
-                                {!! Form::textarea('address', null, ['class' => 'form-control', 'rows'=>'5', 'placeholder' => 'Enter Your Address']) !!}
+                                {!! Form::textarea('address', null, ['class' => 'form-control', 'rows'=>'5', 'placeholder' => 'Entrez votre Addresse']) !!}
                                 <small class="text-danger">{{ $errors->first('address') }}</small>
                               </div>
                               

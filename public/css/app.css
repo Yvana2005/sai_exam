@@ -4033,21 +4033,21 @@ fieldset[disabled] a.btn {
 }
 
 .btn-default {
-  color: #636b6f;
-  background-color: #fff;
+  color: #fff;
+  background-color: #8b008b;
   border-color: #ccc;
 }
 
 .btn-default:focus,
 .btn-default.focus {
-  color: #636b6f;
-  background-color: #e6e5e5;
+  color: #fff;
+  background-color: #8b008b;
   border-color: #8c8c8c;
 }
 
 .btn-default:hover {
-  color: #636b6f;
-  background-color: #e6e5e5;
+  color: #fff;
+  background-color: #c40094;
   border-color: #adadad;
 }
 

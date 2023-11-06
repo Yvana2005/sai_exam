@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Questions By Topic Wise',
+  'page_header' => 'Questions par sujet',
   'dash' => '',
   'quiz' => '',
   'users' => '',

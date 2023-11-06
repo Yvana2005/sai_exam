@@ -2271,13 +2271,13 @@ button.btn-wave {
   background-color: #008d4c;
 }
 .btn-info {
-  background-color: #26a69a !important;
+  background-color: #00acd6 !important;
   border-color: #00acd6;
 }
 .btn-info:hover,
 .btn-info:active,
 .btn-info.hover {
-  background-color: #00acd6;
+  background-color: #cc006a;
 }
 .btn-danger {
   background-color: #dd4b39;

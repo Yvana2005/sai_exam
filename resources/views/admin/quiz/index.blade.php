@@ -28,13 +28,13 @@
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                   {!! Form::label('title', 'Titre') !!}
                   <span class="required">*</span>
-                  {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Entrer la categorie du quiz', 'required' => 'required']) !!}
+                  {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Entrez la categorie du quiz', 'required' => 'required']) !!}
                   <small class="text-danger">{{ $errors->first('title') }}</small>
                 </div>
                 <div class="form-group{{ $errors->has('per_q_mark') ? ' has-error' : '' }}">
                   {!! Form::label('per_q_mark', 'Point par question') !!}
                   <span class="required">*</span>
-                  {!! Form::number('per_q_mark', null, ['class' => 'form-control', 'placeholder' => 'Entrer le nombre de point par question', 'required' => 'required']) !!}
+                  {!! Form::number('per_q_mark', null, ['class' => 'form-control', 'placeholder' => 'Entrez le nombre de point par question', 'required' => 'required']) !!}
                   <small class="text-danger">{{ $errors->first('per_q_mark') }}</small>
                 </div>
                 <div class="form-group{{ $errors->has('timer') ? ' has-error' : '' }}">

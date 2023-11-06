@@ -99,7 +99,7 @@
           </div>
 
           
-          {!! Form::submit("Save Setting", ['class' => 'btn btn-wave btn-block']) !!}
+          {!! Form::submit("Enregistrer", ['class' => 'btn btn-wave btn-block']) !!}
         </div>
        
        
