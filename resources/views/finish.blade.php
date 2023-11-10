@@ -16,7 +16,7 @@
 
 @section('top_bar')
   <nav class="navbar navbar-default navbar-static-top">
-    <div class="logo-main-block">
+    <!--<div class="logo-main-block">
       <div class="container">
         @if ($setting)
           <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
@@ -24,7 +24,7 @@
           </a>
         @endif
       </div>
-    </div>
+    </div>-->
     <div class="nav-bar">
       <div class="container">
         <div class="row">
@@ -32,7 +32,9 @@
             <div class="navbar-header">
               <!-- Branding Image -->
               @if($setting)
-                <a title="Quick Quiz Home" class="tt" href="{{ url('/') }}"><h4 class="heading">{{$setting->welcome_txt}}</h4></a>
+              <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
+                <img src="{{asset('/images/logo/background.png')}}" class="img-responsive" alt="{{$setting->welcome_txt}}">
+              </a> 
               @endif
             </div>
           </div>
@@ -143,8 +145,8 @@
                 <tr>
                   <th>{{__('message.Total Questions')}}</th>
                   <th>{{__('message.My Marks')}}</th>
-                  <th>Point par question</th>
-                  <th>{{__('message.Total Marks')}}</th>
+                 <!-- <th>Point par question</th>-->
+                  <th>Sur </th>
                 </tr>
               </thead>
               <tbody>
@@ -167,7 +169,7 @@
                     @endphp
                     {{$correct}}
                   </td>
-                  <td>{{$topic->per_q_mark}}</td>
+                  <!--<td>{{$topic->per_q_mark}}</td>-->
                   <td>{{$topic->per_q_mark*$count_questions}}</td>
                 </tr>
               </tbody>

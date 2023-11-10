@@ -72,7 +72,7 @@ return [
 "Amount" => "Montant",
 "ANSWER REPORT" => "Rapport de reponse",
 "Your Answer" => "Votre reponses",
-
+"My Marks" => "Mes points",
 
 
 ]
