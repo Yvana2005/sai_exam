@@ -7,11 +7,54 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <script src="https://cdn.cinetpay.com/seamless/main.js" type="text/javascript"></script>
   <script>
     window.Laravel =  <?php echo json_encode([
         'csrfToken' => csrf_token(),
     ]); ?>
   </script>
+  <script>
+        function checkout() {
+          CinetPay.setConfig({
+                apikey: '5337111116358eef42b6448.37599996',//   YOUR APIKEY
+                site_id: '301005',//YOUR_SITE_ID
+                notify_url: 'http://mondomaine.com/notify/',
+                mode: 'PRODUCTION'
+            });
+            CinetPay.getCheckout({
+                transaction_id: Math.floor(Math.random() * 100000000).toString(),
+                amount: 100,
+                currency: 'XOF',
+                channels: 'ALL',
+                description: 'Test de paiement',   
+                 //Fournir ces variables pour le paiements par carte bancaire
+                customer_name:"Joe",//Le nom du client
+                customer_surname:"Down",//Le prenom du client
+                customer_email: "down@test.com",//l'email du client
+                customer_phone_number: "088767611",//l'email du client
+                customer_address : "BP 0024",//addresse du client
+                customer_city: "Antananarivo",// La ville du client
+                customer_country : "CM",// le code ISO du pays
+                customer_state : "CM",// le code ISO l'état
+                customer_zip_code : "06510", // code postal
+
+            });
+            CinetPay.waitResponse(function(data) {
+                if (data.status == "REFUSED") {
+                    if (alert("Votre paiement a échoué")) {
+                        window.location.reload();
+                    }
+                } else if (data.status == "ACCEPTED") {
+                    if (alert("Votre paiement a été effectué avec succès")) {
+                        window.location.reload();
+                    }
+                }
+            });
+            CinetPay.onError(function(data) {
+                console.log(data);
+            });
+        }
+    </script>
 @endsection
 
 @section('top_bar')
@@ -83,7 +126,7 @@
 <div class="container">
   @if ($auth)
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2">
         <div class="home-main-block">
 
                
@@ -135,15 +178,15 @@
           </div>
 
           @endif
+      
 
-
-
+      
           <div class="question-block">
-            <h2 class="text-center main-block-heading">{{$topic->title}} Resultat</h2>
+            <h2 class="text-center main-block-heading">{{$topic->title}} Résultats</h2>
             <table class="table table-bordered result-table">
               <thead>
                 <tr>
-                  <th>{{__('message.Total Questions')}}</th>
+                  <th>Questions Total</th>
                   <th>{{__('message.My Marks')}}</th>
                  <!-- <th>Point par question</th>-->
                   <th>Sur </th>
@@ -174,11 +217,21 @@
                 </tr>
               </tbody>
             </table>
-            <h2 class="text-center">Merci !</h2>
+            @if($correct < ($topic->per_q_mark*$count_questions)/2)
+            <p>Malheureusement vous n'avez pas reussi le test, mais vous avez la possibilité de repasser le test en passant par un paiement.</p>
+            <div class="col-md-6">
+              <button onclick="checkout()" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF;">Paiement </button>
+            </div>
+            <img src="https://docs.cinetpay.com/images/latest_cm1.png" alt="Logo CinetPay" style="margin-bottom:0; width: 50%; height: 10%">
+            @else
+            <p style="font-size:20px;">Félicitation vous avez réussi le test, avec une note de <strong>{{$correct}}</strong> sur <strong>{{$topic->per_q_mark*$count_questions}}</strong><p>
+            @endif
+            
           </div>
         </div>
       </div>
     </div>
+    
   @endif
 </div>
 @endsection

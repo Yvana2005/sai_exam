@@ -112,9 +112,10 @@
             <tr>
               <th>#</th>
               <th>{{__('message.Student Name')}}</th>
+              <th>Prénom</th>
               <th>Email</th>
               <th>{{__('message.Mobile No.')}}</th>
-              <th>Ville</th>
+              
               <th>Addresse</th>
               <th>Role d''utilisateur</th>
               <th>Actions</th>
@@ -130,9 +131,10 @@
                     @php($n++)
                   </td>
                   <td>{{$user->name}}</td>
+                  <td>{{$user->city}}</td>
                   <td>{{$user->email}}</td>
                   <td>{{$user->mobile}}</td>
-                  <td>{{$user->city}}</td>
+                  
                   <td>{{$user->address}}</td>
                   <td>{{$user->role == 'S' ? 'Student' : '-'}}</td>
                   <td>
@@ -230,7 +232,7 @@
                         </div>
                         <div class="modal-footer">
                           <div class="btn-group pull-right">
-                            {!! Form::submit("Update", ['class' => 'btn btn-wave']) !!}
+                            {!! Form::submit("Mettre à jour", ['class' => 'btn btn-wave']) !!}
                           </div>
                         </div>
                       {!! Form::close() !!}

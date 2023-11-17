@@ -22,23 +22,23 @@
       <form class="form login-form" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-          {!! Form::label('name', 'Name') !!}
+          {!! Form::label('name', 'Nom') !!}
           {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'Entrez votre nom']) !!}
           <small class="text-danger">{{ $errors->first('name') }}</small>
         </div>
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-          {!! Form::label('email', 'Email address') !!}
+          {!! Form::label('email', 'Email') !!}
           {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'eg: foo@bar.com']) !!}
           <small class="text-danger">{{ $errors->first('email') }}</small>
         </div>
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-          {!! Form::label('password', 'Password') !!}
+          {!! Form::label('password', 'Mot de passe') !!}
           {!! Form::password('password', ['class' => 'form-control', 'required' => 'required', 'placeholder'=>'Entrez le mot de passe']) !!}
           <small class="text-danger" style="color: red; background-color: #FFF;">{{ $errors->first('password') }}</small>
         </div>
         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-          {!! Form::label('password_confirmation', 'Confirm Password') !!}
-          {!! Form::password('password_confirmation', ['class' => 'form-control', 'required' => 'required', 'placeholder'=>'Confirmer le mot de passe']) !!}
+          {!! Form::label('password_confirmation', 'Confirm password') !!}
+          {!! Form::password('password_confirmation', ['class' => 'form-control', 'required' => 'required', 'placeholder'=>'Confirmez le mot de passe']) !!}
           <small class="text-danger">{{ $errors->first('password_confirmation') }}</small>
         </div>
         <div class="mr-t-20">

@@ -162,7 +162,7 @@
                         <input type="hidden" name="topic_id" value="{{$topic->id}}"/>
                          @if(!empty($topic->amount)) 
 
-                        <button type="submit" class="btn btn-default">Pay  <i class="{{$setting->currency_symbol}}"></i>{{$topic->amount}}</button>
+                        <button type="submit" class="btn btn-default">Payer  {{$topic->amount}}<i class="{{$setting->currency_symbol}}"></i></button>
                           @else 
 
                           <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Commencer </a>
@@ -184,7 +184,7 @@
                         $a = true;
                       }
                     @endphp
-                    <a href="{{$a ? url('start_quiz/'.$topic->id.'/finish') : route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Start Quiz
+                    <a href="{{$a ? url('start_quiz/'.$topic->id.'/finish') : route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Commencer 
                     </a>
                   </div> --}}
                 </div>

@@ -24,6 +24,9 @@ return [
 "Total Questions" => "Total questions",
 "Total Time" => "Temps",
 "Quiz Price" => "Prix",
+"Time" => "Temps",
+
+
 
 //email.blade.php
 "Send Password Reset Link" => "Renitialiser le mot de passe",

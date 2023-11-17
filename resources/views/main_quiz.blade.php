@@ -12,6 +12,60 @@
         'csrfToken' => csrf_token(),
     ]); ?>
   </script>
+    <script src="https://cdn.cinetpay.com/seamless/main.js" type="text/javascript"></script>
+    <style>
+        .sdk {
+            display: block;
+            position: absolute;
+            background-position: center;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function checkout() {
+          CinetPay.setConfig({
+                apikey: '5337111116358eef42b6448.37599996',//   YOUR APIKEY
+                site_id: '301005',//YOUR_SITE_ID
+                notify_url: 'http://mondomaine.com/notify/',
+                mode: 'PRODUCTION'
+            });
+            CinetPay.getCheckout({
+                transaction_id: Math.floor(Math.random() * 100000000).toString(),
+                amount: 100,
+                currency: 'XOF',
+                channels: 'ALL',
+                description: 'Test de paiement',   
+                 //Fournir ces variables pour le paiements par carte bancaire
+                customer_name:"Joe",//Le nom du client
+                customer_surname:"Down",//Le prenom du client
+                customer_email: "down@test.com",//l'email du client
+                customer_phone_number: "088767611",//l'email du client
+                customer_address : "BP 0024",//addresse du client
+                customer_city: "Antananarivo",// La ville du client
+                customer_country : "CM",// le code ISO du pays
+                customer_state : "CM",// le code ISO l'état
+                customer_zip_code : "06510", // code postal
+
+            });
+            CinetPay.waitResponse(function(data) {
+                if (data.status == "REFUSED") {
+                    if (alert("Votre paiement a échoué")) {
+                        window.location.reload();
+                    }
+                } else if (data.status == "ACCEPTED") {
+                    if (alert("Votre paiement a été effectué avec succès")) {
+                        window.location.reload();
+                    }
+                }
+            });
+            CinetPay.onError(function(data) {
+                console.log(data);
+            });
+        }
+    </script>
 @endsection
 
 @section('top_bar')
@@ -64,14 +118,15 @@
        @if(!empty($users))
        <div class="home-main-block">
           <div class="alert alert-danger">
-              Vous avez deja passe le test ! Pour pouvoir recommencer vous devez payer ou sinon vous pouvez vous amuser avec nos autres quiz
+              Vous avez déja passé le test ! Pour pouvoir recommencer vous devez payer les frais demandés
           </div>
           <div class="col-md-6">
           <a href="{{route('login')}}" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF; margin-bottom:10px;">Accueil </a>
           </div>
           <div class="col-md-6">
-          <a href="{{!! URL::to('paypal') !!}}" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF;">Paiement </a>
+          <button onclick="checkout()" class="btn btn-block" title="Start Quiz" style="font-size:20px;color: #FFF;">Paiement </button>
           </div>
+          <img src="https://docs.cinetpay.com/images/latest_cm1.png" alt="Logo CinetPay" style="margin-bottom:0; width: 50%; height: 10%">
         </div> 
        @else
       <div id="question_block" class="question-block">
