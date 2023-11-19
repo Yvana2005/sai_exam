@@ -15,14 +15,14 @@ return [
 "Already Have Account ?" => "Avez-vous deja un compte?",
 
 //home.blade.php
-"How it works" => "Comment ca marche?",
+"How it works" => "Comment ça marche?",
 "About us" => "A propos",
 "Dashboard" => "Tableau de bord",
 "Register" => "Registre",
-"Per Question Mark" => "points",
-"Total Marks" => "Points total",
-"Total Questions" => "Total questions",
-"Total Time" => "Temps",
+"Per Question Mark" => "point par question",
+"Total Marks" => "Total des points",
+"Total Questions" => "Nombre de questions",
+"Total Time" => "Temps du quiz",
 "Quiz Price" => "Prix",
 "Time" => "Temps",
 
@@ -76,7 +76,9 @@ return [
 "ANSWER REPORT" => "Rapport de reponse",
 "Your Answer" => "Votre reponses",
 "My Marks" => "Mes points",
-
+"Correct Answer" => "Réponse correcte",
+"Student's Answer" => "Réponse de l'utilisateur",
+"Delete" => "Supprimer",
 
 ]
 ?>

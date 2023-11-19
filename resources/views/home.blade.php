@@ -83,6 +83,9 @@
 <div class="container">
   @if ($auth)
     <div class="quiz-main-block">
+    <blockquote>
+      <h3 style="text-align:center;">Choisissez votre filière et continuer le test</h3>
+    </blockquote>
       <div class="row">
         @if ($topics)
           @foreach ($topics as $topic)
@@ -96,16 +99,18 @@
                       <div class="col-xs-6 pad-0">
                         <ul class="topic-detail">
                           <li>{{__('message.Per Question Mark')}} <i class="fa fa-long-arrow-right"></i></li>
-                          <li>{{__('message.Total Marks')}}  <i class="fa fa-long-arrow-right"></i></li>
+                          <!--<li>{{__('message.Total Marks')}}  <i class="fa fa-long-arrow-right"></i></li>-->
                           <li>{{__('message.Total Questions')}} <i class="fa fa-long-arrow-right"></i></li>
                           <li>{{__('message.Total Time')}} <i class="fa fa-long-arrow-right"></i></li>
-                          <li>{{__('message.Quiz Price')}} <i class="fa fa-long-arrow-right"></i></li>
+                         <!--<li>{{__('message.Quiz Price')}} <i class="fa fa-long-arrow-right"></i></li>-->
+                        
                         </ul>
                       </div>
                       <div class="col-xs-6">
                         <ul class="topic-detail right">
                           <li>{{$topic->per_q_mark}}</li>
-                          <li>
+                          <li>---</li>
+                          <!--<li>
                             @php
                                 $qu_count = 0;
                             @endphp
@@ -117,21 +122,22 @@
                               @endif
                             @endforeach
                             {{$topic->per_q_mark*$qu_count}}
-                          </li>
+                          </li>-->
                           <li>
                             {{$qu_count}}
                           </li>
+                          <li>---</li>
                           <li>
                             {{$topic->timer}} minutes
                           </li>
 
-                          <li class="amount">
+                          <!--<li class="amount">
                             @if(!empty($topic->amount))
                             {{-- <i class="{{$setting->currency_symbol}}"></i> {{$topic->amount}}   --}}
                              @else
                                Free
                             @endif
-                          </li>
+                          </li>-->
                         </ul>
                       </div>
                     </div>
@@ -200,14 +206,14 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="home-main-block">
               
-                <!--<h1 class="main-block-heading text-center" style="color:#fff; text-shadow:2px 2px 2px #8b008b;">QUIZ APP Saï i lama</h1>-->
+                <h1 class="main-block-heading text-center" style="color:#fff; text-shadow:2px 2px 2px #8b008b;">QUIZ APP Saï i lama</h1>
                 
                  <blockquote>
-                   <div class="col-md-12">
+                   <!--<div class="col-md-12">
                    <a href="{{ url('/') }}" title="{{$setting->welcome_txt}}">
                       <img src="{{asset('/images/logo/makeup.jpg')}}" class="img-responsive" alt="{{$setting->welcome_txt}}" style="max-width: 95% !important; align-items:center; margin-left:10px; margin-bottom: 30px; border-radius: 6px; box-shadow:2px 2px 2px #424242;">
                    </a>
-                   </div>
+                   </div>-->
                   
                
                   <p>Pour commencer le Quiz, vous devez vous connecter</p>

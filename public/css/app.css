@@ -323,6 +323,7 @@ th {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important;
+    border-radius: 5px;
   }
 }
 
@@ -1890,6 +1891,7 @@ blockquote {
   padding: 11px 22px;
   margin: 0 0 22px;
   font-size: 17.5px;
+  border-radius: 5px;
   border-left: 5px solid #eeeeee;
 }
 
@@ -8636,7 +8638,7 @@ button.btn-wave {
 }
 
 .home-main-block blockquote {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-left: 120px;
   width: 70%;
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);

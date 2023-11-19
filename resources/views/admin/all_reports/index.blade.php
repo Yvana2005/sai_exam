@@ -23,7 +23,7 @@
               <div class="col-xs-6 pad-0">
                 <ul class="topic-detail">
                   <li>{{__('message.Per Question Mark')}} <i class="fa fa-long-arrow-right"></i></li>
-                  <li>{{__('message.Total Marks')}} <i class="fa fa-long-arrow-right"></i></li>
+                  <!--<li>{{__('message.Total Marks')}} <i class="fa fa-long-arrow-right"></i></li>-->
                   <li>{{__('message.Total Questions')}} <i class="fa fa-long-arrow-right"></i></li>
                   <li>{{__('message.Total Time')}} <i class="fa fa-long-arrow-right"></i></li>
                 </ul>
@@ -31,7 +31,8 @@
               <div class="col-xs-6">
                 <ul class="topic-detail right">
                   <li>{{$topic->per_q_mark}}</li>
-                  <li>
+                  <li>---</li>
+                 <!-- <li>
                     @php
                         $qu_count = 0;
                     @endphp
@@ -43,10 +44,11 @@
                       @endif
                     @endforeach
                     {{$topic->per_q_mark*$qu_count}}
-                  </li>
+                  </li>-->
                   <li>
                     {{$qu_count}}
                   </li>
+                  <li>---</li>
                   <li>
                     {{$topic->timer}} minutes
                   </li>

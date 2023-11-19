@@ -103,7 +103,7 @@
             <th>{{__('message.Quiz Title')}}</th>
             <th>Description</th>
             <th>{{__('message.Per Question Mark')}}</th>
-            <th>Temp</th>
+            <th>Temps</th>
             <th>Actions</th>
           </tr>
         </thead>
