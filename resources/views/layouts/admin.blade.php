@@ -103,10 +103,10 @@ $setting = App\Setting::first();
         @if ($auth->role == 'A')
           <!-- Optionally, you can add icons to the links -->
           <li class="{{$dash}}"><a href="{{url('/admin')}}" title="Dashboard"><i class="fa fa-dashboard"></i> <span>{{__('message.Dashboard')}}</span></a></li>
-          <li class="{{$users}}"><a href="{{url('/admin/users')}}" title="Students"><i class="fa fa-users"></i> <span>{{__('message.Students')}}</span></a></li>
+          <li class="{{$users}}"><a href="{{url('/admin/users')}}" title="Utilisateurs"><i class="fa fa-users"></i> <span>{{__('message.Students')}}</span></a></li>
           <li class="{{$quiz}}"><a href="{{url('admin/topics')}}" title="Quiz"><i class="fa fa-gears"></i> <span>Quiz</span></a></li>          
           <li class="{{$questions}}"><a href="{{url('admin/questions')}}" title="Questions"><i class="fa fa-question-circle-o"></i> <span>{{__('message.Questions')}}</span></a></li>          
-          <li class="{{$all_re}}"><a href="{{url('/admin/all_reports')}}" title="Student Report"><i class="fa fa-file-text-o"></i> <span>{{__('message.Student Report')}}</span></a></li>
+          <li class="{{$all_re}}"><a href="{{url('/admin/all_reports')}}" title="Rapport d'utilisateurs"><i class="fa fa-file-text-o"></i> <span>{{__('message.Student Report')}}</span></a></li>
           <li class="{{$top_re}}"><a href="{{url('/admin/top_report')}}" title="Top Student Report"><i class="fa fa-user"></i> <span>{{__('message.Top Student Report')}}</span></a></li>
 
           
