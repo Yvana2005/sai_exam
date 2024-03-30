@@ -89,7 +89,7 @@
             </div>
             {{-- <div class="col-md-6">
               <div class="form-group">
-               <label for="">User can repeat Quiz?</label>
+               <label for="">L'utilisateur peut-il répéter le quiz ?</label>
                 <select name="userquiz" id="">
                        <option @if($setting->userquiz == 1) selected @endif value="1">Yes</option>
                        <option @if($setting->userquiz == 0) selected @endif value="0">No</option>

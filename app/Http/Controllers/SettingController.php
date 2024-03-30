@@ -97,7 +97,7 @@ class SettingController extends Controller
         if ($file2 = $request->file('favicon')) {
 
             $name2 = $file2->getClientOriginalName();
-            unlink(public_path().'/images/logo/'.$setting->favicon.'.ico');
+            unlink(public_path().'/images/logo/'.$setting->favicon);
             $file2->move('images/logo/', $name2);
             $input['favicon'] = $name2;
 

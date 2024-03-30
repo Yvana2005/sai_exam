@@ -1,5 +1,5 @@
 {{-- @extends('layouts.admin', [
-  'page_header' => "All Student's Answers",
+  'page_header' => "Toutes les réponses des étudiants",
   'dash' => '',
   'users' => '',
   'questions' => '',

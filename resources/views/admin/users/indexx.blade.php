@@ -51,25 +51,25 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    {!! Form::label('name', 'Student Name') !!}
+                    {!! Form::label('name', "Nom de l'utilisateur") !!}
                     <span class="required">*</span>
                     {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'Entrez votre nom']) !!}
                     <small class="text-danger">{{ $errors->first('name') }}</small>
                   </div>
                   <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    {!! Form::label('email', 'Email address') !!}
+                    {!! Form::label('email', 'Addresse E-mail') !!}
                     <span class="required">*</span>
                     {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'eg: info@examlpe.com', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('email') }}</small>
                   </div>
                   <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                    {!! Form::label('password', 'Password') !!}
+                    {!! Form::label('password', 'Mot de passe') !!}
                     <span class="required">*</span>
                     {!! Form::password('password', ['class' => 'form-control', 'placeholder'=>'Entrez votre mot de passe', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('password') }}</small>
                   </div>
                   <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
-                      {!! Form::label('role', 'User Role') !!}
+                      {!! Form::label('role', 'Role') !!}
                       <span class="required">*</span>
                       {!! Form::select('role', ['S' => 'Student', 'A'=>'Administrator'], null, ['class' => 'form-control select2', 'required' => 'required']) !!}
                       <small class="text-danger">{{ $errors->first('role') }}</small>
@@ -77,19 +77,19 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
-                    {!! Form::label('mobile', 'Mobile No.') !!}
+                    {!! Form::label('mobile', 'No. de téléphone') !!}
                     <span class="required">*</span>
                     {!! Form::text('mobile', null, ['class' => 'form-control', 'placeholder' => 'eg: +91-123-456-7890', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('mobile') }}</small>
                   </div>
                   <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-                    {!! Form::label('city', 'Enter City') !!}
-                    {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Enter Your City']) !!}
+                    {!! Form::label('city', 'Prénom') !!}
+                    {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Entrez Votre Prénom']) !!}
                     <small class="text-danger">{{ $errors->first('city') }}</small>
                   </div>
                   <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                    {!! Form::label('address', 'Address') !!}
-                    {!! Form::textarea('address', null, ['class' => 'form-control', 'rows'=>'5', 'placeholder' => 'Enter Your address']) !!}
+                    {!! Form::label('address', 'Addresse') !!}
+                    {!! Form::textarea('address', null, ['class' => 'form-control', 'rows'=>'5', 'placeholder' => 'Entrez Votre addresse']) !!}
                     <small class="text-danger">{{ $errors->first('address') }}</small>
                   </div>
                 </div>
@@ -97,8 +97,8 @@
             </div>
             <div class="modal-footer">
               <div class="btn-group pull-right">
-                {!! Form::reset("Reset", ['class' => 'btn btn-default']) !!}
-                {!! Form::submit("Add", ['class' => 'btn btn-wave']) !!}
+                {!! Form::reset("Annuler", ['class' => 'btn btn-default']) !!}
+                {!! Form::submit("Ajouter", ['class' => 'btn btn-wave']) !!}
               </div>
             </div>
           {!! Form::close() !!}
@@ -117,7 +117,7 @@
               <th>{{__('message.Mobile No.')}}</th>
               
               <th>Addresse</th>
-              <th>Role d''utilisateur</th>
+              <th>Role utilisateur</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -171,7 +171,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Edit Student </h4>
+                        <h4 class="modal-title">Editer un Utilisateur </h4>
                       </div>
                       {!! Form::model($user, ['method' => 'PATCH', 'action' => ['UsersController@update', $user->id]]) !!}
                         <div class="modal-body">
@@ -217,8 +217,8 @@
                                 <small class="text-danger">{{ $errors->first('mobile') }}</small>
                               </div>
                               <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-                                {!! Form::label('city', 'Enter City') !!}
-                                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Entrez votre ville']) !!}
+                                {!! Form::label('city', 'Prenom') !!}
+                                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Entrez votre Prenom']) !!}
                                 <small class="text-danger">{{ $errors->first('city') }}</small>
                               </div>
                               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
