@@ -13,7 +13,7 @@
   <div class="box">
     <div class="box-body">
       <div class="margin-bottom">
-      <a title="Create a new page" href="{{ route('pages.add') }}" class="btn btn-md btn-primary">+ Create Page</a>
+      <a title="Create a new page" href="{{ route('pages.add') }}" class="btn btn-md btn-primary">+ Créer une page</a>
         
       </div>
       
@@ -21,7 +21,7 @@
         <thead>
           <tr>
             <th>SN</th>
-            <th>Title</th>
+            <th>Titre</th>
 
             <th>URL</th>
             <th>Status</th>

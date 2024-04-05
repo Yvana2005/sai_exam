@@ -20,7 +20,7 @@ return [
 "Dashboard" => "Tableau de bord",
 "Register" => "Registre",
 "Per Question Mark" => "point par question",
-"Total Marks" => "Total des points",
+"Total Marks" => "Sur",
 "Total Questions" => "Nombre de questions",
 "Total Time" => "Temps du quiz",
 "Quiz Price" => "Prix",

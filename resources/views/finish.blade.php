@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="{{asset('css/finish.css')}}">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -122,7 +123,9 @@
   </nav>
 @endsection
 
+
 @section('content')
+<div class="scrollable-content">
 <div class="container">
   @if ($auth)
     <div class="row">
@@ -233,8 +236,11 @@
     </div>
     
   @endif
+  </div>
 </div>
+
 @endsection
+
 
 @section('scripts')
   <script>

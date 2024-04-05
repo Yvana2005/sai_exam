@@ -66,8 +66,8 @@
                  
                   <li><a href="{{ route('faq.get') }}">FAQ</a></li>
                 @endguest
-                  <li><a href="{{url('pages/how-it-works')}}">How it works</a></li>
-                  <li><a href="{{url('pages/about-us')}}">About us</a></li>
+                  <li><a href="{{url('pages/how-it-works')}}">{{__('message.How it works')}}</a></li>
+                  <li><a href="{{url('pages/about-us')}}">{{__('message.About us')}}</a></li>
               </ul>
             </div>
           </div>

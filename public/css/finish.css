@@ -1,0 +1,4 @@
+.scrollable-content {
+    max-height: 500px; /* Hauteur maximale de la zone de contenu */
+    overflow-y: auto; /* Activer la barre de défilement verticale uniquement lorsque nécessaire */
+ }

@@ -41,7 +41,7 @@
                   <span class="required">*</span>
                   {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'eg: info@example.com', 'required' => 'required']) !!}
                   <small class="text-danger">{{ $errors->first('email') }}</small>
-                </div>
+                </div> 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                   {!! Form::label('password', 'Mot de passe') !!}
                   <span class="required">*</span>

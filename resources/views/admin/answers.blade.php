@@ -38,7 +38,7 @@
                 <td>{{$answer->answer}}</td>
                 <td>
                   <!-- Delete Button -->
-                  <a type="button" class="btn btn-info btn-xs btn-danger" data-toggle="modal" data-target="#{{$answer->id}}deleteModal"><i class="fa fa-close"></i> Delete</a>
+                  <a type="button" class="btn btn-info btn-xs btn-danger" data-toggle="modal" data-target="#{{$answer->id}}deleteModal"><i class="fa fa-close"></i> Supprimer</a>
                   <div id="{{$answer->id}}deleteModal" class="delete-modal modal fade" role="dialog">
                     <!-- Delete Modal -->
                     <div class="modal-dialog modal-sm">
