@@ -97,7 +97,7 @@ class SettingController extends Controller
         if ($file2 = $request->file('favicon')) {
 
             $name2 = $file2->getClientOriginalName();
-            unlink(public_path().'/images/logo/'.$setting->favicon.'.ico');
+            unlink(public_path().'/images/logo/'.$setting->favicon);
             $file2->move('images/logo/', $name2);
             $input['favicon'] = $name2;
 
@@ -120,7 +120,7 @@ class SettingController extends Controller
         }
 
         $setting->update($input);
-        return back()->with('updated', 'Settings have been saved !');
+        return back()->with('updated', 'Les paramètres ont été mis à jour !');
 
     }
 

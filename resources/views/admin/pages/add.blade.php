@@ -12,14 +12,14 @@
 @section('content')
   <div class="box">
     <div class="box-body">
-      <h3>Creating new page</h3>
+      <h3>Création d'une nouvelle page</h3>
     <hr>
     <form class="col-md-8" action="{{ route('pages.store') }}" method="POST">
       {{ csrf_field() }}
-      <label for="name">Page Title:</label>
+      <label for="name">Titre de la page:</label>
       <input required type="text" name="name" class="form-control">
       <br>
-      <label for="name">Page Content:</label>
+      <label for="name">Contenu de la page:</label>
       <textarea name="details" class="form-control"></textarea>
       <br>
       <label for="Status">Status</label>
@@ -28,7 +28,7 @@
         <label for="toggle"></label>
     <br>
       <button type="submit" class="btn btn-primary btn-md">
-        <i class="fa fa-plus"></i> Create
+        <i class="fa fa-plus"></i> Créer
       </button>
       <br>
     </form>
