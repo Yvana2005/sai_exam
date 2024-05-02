@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/ico" href="{{asset('/images/logo/'. $setting->favicon)}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+  
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}">
+    <!-- Admin Theme style -->
+    <link rel="stylesheet" href="{{asset('css/AdminLTE.css')}}">
+    <link rel="stylesheet" href="{{asset('css/skin-black.css')}}">
+    <link rel="stylesheet" href="{{asset('css/fontawesome-iconpicker.min.css')}}">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="{{asset('css/select2.min.css')}}">
+    <!-- DataTable -->
+    <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <!--[if IE]>
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <![endif]-->
@@ -19,7 +36,7 @@
     @yield('head')
 
 </head>
-<body>
+<body class="hold-transition skin-black sidebar-mini">
     <div id="app" style="position: relative;">
         @yield('top_bar')
         @yield('content')
@@ -53,3 +70,18 @@
     @yield('scripts')
 </body>
 </html>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<!-- DataTable -->
+<script src="{{asset('js/datatables.min.js')}}"></script>
+<!-- Select2 -->
+<script src="{{asset('js/select2.full.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{asset('js/adminlte.min.js')}}"></script>
+
+<script src="{{asset('js/fontawesome-iconpicker.min.js')}}"></script>
+
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>

@@ -125,7 +125,7 @@
 
 
 @section('content')
-<div class="scrollable-content">
+<div class="scrollable-container">
 <div class="container">
   @if ($auth)
     <div class="row">

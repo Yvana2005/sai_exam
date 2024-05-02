@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::redirect('/', 'home');
 
+
 Auth::routes();
 
 /*google login route*/
@@ -31,7 +32,9 @@ Auth::routes();
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider')->name('sociallogin');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
 
-
+Route::get('/About_us', function () {
+  return view('About_us');
+})->name('About_us');
 /*facebook login route*/
 
 // Route::get('login/google', 'Auth\LoginController@redirectToProvider');

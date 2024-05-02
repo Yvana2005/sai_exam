@@ -2,6 +2,7 @@
 
 @section('head')
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/finish.css')}}">
   <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
   <script>
     window.Laravel =  <?php echo json_encode([
@@ -65,11 +66,12 @@
                       </li>
                     </ul>
                   </li>
-                 
+                  <!-- "{{url('pages/how-it-works')}}" "{{url('pages/about-us')}}"-->
                   <li><a href="{{ route('faq.get') }}">FAQ</a></li>
                 @endguest
-                  <li><a href="{{url('pages/how-it-works')}}">{{__('message.How it works')}}</a></li>
-                  <li><a href="{{url('pages/about-us')}}">{{__('message.About us')}}</a></li>
+                  <li><a href="{{ route('About_us') }}">{{__('message.How it works')}}</a></li>
+                  <li><a href="{{ asset('pdf/DEVIS.pdf') }}">{{__('message.About us')}}</a></li>
+                  
               </ul>
             </div>
           </div>
@@ -80,11 +82,14 @@
 @endsection
 
 @section('content')
+<div class="scrollable-container">
 <div class="container">
   @if ($auth)
     <div class="quiz-main-block">
+    
     <blockquote>
       <h3 style="text-align:center;">Choisissez votre filière et continuer le test</h3>
+      <button class="scroll-to-bottom" onclick="scrollToBottom()">Aller en bas</button>
     </blockquote>
       <div class="row">
         @if ($topics)
@@ -202,7 +207,8 @@
     </div>
   @endif
   @if (!$auth)
-    <div class="row">
+  
+    <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="home-main-block">
               
@@ -222,9 +228,10 @@
             </div>
         </div>
     </div>
+  
   @endif
 </div>
-
+</div>
 
 @endsection
 
@@ -275,7 +282,31 @@
      return false;
    }
  });
+
 });
+
+</script>
+
+<script type="text/javascript" language="javascript">
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  }
+
+  window.addEventListener("scroll", function() {
+    var scrollPosition = window.pageYOffset;
+    var scrollToBottomButton = document.querySelector(".scroll-to-bottom");
+  
+    if (scrollPosition < (document.body.scrollHeight - window.innerHeight)) {
+      scrollToBottomButton.style.display = "block";
+    } else {
+      scrollToBottomButton.style.display = "none";
+    }
+  });
+
+
      // end all controller is disable
  </script>
 
